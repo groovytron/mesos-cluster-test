@@ -1,4 +1,5 @@
-Type d'activité | Tâche                                 | Date       | Description et problème(s) rencontré(s)                                                               | Temps passé
---------------- | ------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------- | -----------
-Documentation   | Visio conférence avec le CHUV         | 23.02.2017 | Présentation des technologies utilisées et à prendre en main. Première définition des buts du projet. | 30
-Documentation   | Première entrevue avec la superviseur | 23.02.2017 |                                                                                                       | 30
+Type d'activité                | Tâche                                 | Date       | Description et problème(s) rencontré(s)                                                                   | Temps passé
+------------------------------ | ------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------- | -----------
+Environnement de développement | Prise en main de docker               | 02.03.2017 | Comment gérer des containers, créer ses propres images, commandes de base utilisables dans un dockerfile. | 90
+Documentation                  | Visio conférence avec le CHUV         | 23.02.2017 | Présentation des technologies utilisées et à prendre en main. Première définition des buts du projet.     | 30
+Documentation                  | Première entrevue avec la superviseur | 23.02.2017 |                                                                                                           | 30
