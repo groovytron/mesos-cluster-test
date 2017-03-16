@@ -1,5 +1,6 @@
 Type d'activité                | Tâche                                    | Date       | Description et problème(s) rencontré(s)                                                                   | Temps passé
 ------------------------------ | ---------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------- | -----------
+Documentation                  | Deuxième version d'un cahier des charges | 16.03.2017 | Correction en fonction de ce qui a été discuté lors de l'entrevue du 09.03.2017.                                                               | 120
 Documentation                  | Mise à jour des informations dans Trello | 02.03.2017 | Ajout des informations issue de l'entrevue.                                                               | 35
 Documentation                  | Visio conférence avec le CHUV            | 02.03.2017 | Détails concernant l'architecture du MIP. Définition grossière des objectifs.                             | 35
 Environnement de développement | Prise en main de docker                  | 02.03.2017 | Comment gérer des containers, créer ses propres images, commandes de base utilisables dans un dockerfile. | 90

@@ -14,7 +14,7 @@ Welcome to MIP App Framework's documentation!
 Introduction
 ============
 
-Introduction
+Sous-section
 ------------
 
 Ceci est un test pour insérer du code dans le document.
