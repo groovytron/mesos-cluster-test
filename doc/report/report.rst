@@ -71,8 +71,9 @@ partager leurs configurations (accès aux serveurs de base de données, accès
 aux serveurs HTTP, etc.). ZooKeepere est utilisé par des entreprises comme
 Yahoo! et Reddit.
 
-Sous-section
-------------
+
+Tests
+=====
 
 Ceci est un test pour insérer du code dans le document.
 
