@@ -40,7 +40,10 @@ On peut créer un `Vagrantfile` facilement grâce à la commande
 CentOS par exemple. On peut ensuite lancer la machine virtuelle en se plaçant
 dans le dossier contenant le `Vagrantfile` et en utilisant la commande
 :code:`vagrant up`. On peut ensuite se connecter à la machine virtuelle en ssh
-grâce à la commande :code:`vagrant ssh`.
+grâce à la commande :code:`vagrant ssh`. On peut éteindre la machine virtuelle
+démarrée avec la commande `vagrant halt` ou `vagrant destroy` si on désire
+effacer effacer complètement la machine virtuelle.
+
 
 Mesos
 ~~~~~
@@ -68,9 +71,20 @@ services entre eux grâce à un système de stockage clé-valeur implémenté
 sous forme d'un système de fichiers. Les clients peuvent lire ou écrire
 dans ce système de fichier pour se transmettre des informations et ainsi
 partager leurs configurations (accès aux serveurs de base de données, accès
-aux serveurs HTTP, etc.). ZooKeepere est utilisé par des entreprises comme
+aux serveurs HTTP, etc.). ZooKeeper est utilisé par des entreprises comme
 Yahoo! et Reddit.
 
+Avant de démarrer, le serveur ZooKeeper doit être initialisé avec un ID.
+Pour par exemple l'initialiser avec un l'ID *1*, il suffit de lancer la
+commande `sudo -u zookeeper zookeeper-server-initialize --myid=1`.
+Une fois initialisé, le serveur peut être démarré. Comme il se comporte
+comme un service sur UNIX, il suffit de lancer la commande
+`sudo service zookeeper-server start`. On peut l'appeler avec `enable`
+si l'on veut que le serveur démarre au boot de la machine et ainsi éviter
+de devoir le démarrer manuellement. On peut le stopper avec `start`.
+
+On peut interagir avec ZooKeeper au-travers de son client à l'aide de
+la commande `zookeeper-client`.
 
 Tests
 =====
