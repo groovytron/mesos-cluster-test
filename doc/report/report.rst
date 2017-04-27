@@ -46,8 +46,9 @@ effacer complètement la machine virtuelle.
 
 Vagrant a besoin d'une solution de virtualisation pour fonctionner. Il supporte
 **Virtualbox**, **Docker** et également **KVM** qui remplissent ce rôle.
-Il est généralement utilisé avec Virtualbox mais il semble que KVM soit plus
-performant.
+Il est généralement utilisé avec Virtualbox mais il semble que KVM soit
+la solution à privilégier. Utilisé par DigitalOcean et Linode, KVM est un bon
+compromis entre performance et sécurité.
 
 
 Mesos
@@ -58,8 +59,44 @@ machines.
 Ce logiciel propose plusieurs outils permettant l'isolation de CPU, de
 mémoire et de fichiers. Utiliser un tel logiciel permet donc de partager
 les ressources d'une infrastructure. En général, Mesos est utilisé
-conjointement avec **Marathon**. Mesos est utilisé par de grandes entreprises
-telles que Twitter, Airbnb, Apple ou encore Verizon.
+conjointement avec **Marathon**. Mesos est utilisé pour la gestion de systèmes
+distribués de grandes entreprises telles que Twitter, Airbnb, Apple ou
+encore Verizon.
+
+Mesos supporte Docker et permet une isolation entre les tâches et les containers
+devant les réaliser.
+Concernant son utilisation, Mesos propose un CLI et une interface web permettant
+son administration.
+
+Deux types d'instances de Mesos fonctionnent conjointement; une instance master
+et une instance slave. Pour qu'une application travaille avec Mesos, il est
+nécessaire d'utiliser un framerwork. Celui-ci est composé d'un scheduler
+(responsable de traiter les offres de ressources) et un executor utilsable par
+l'esclave pour réaliser une ou plusieurs tâches du framework. Il existe
+des framework dans différents langages; Chronos ou Spark pour Scala, Hadoop ou
+Storm pour Java et dpark pour Python.
+
+L'interaction antre le framework, le master et le slave se fait de la manière
+suivante:
+
+1. Le slave notifie le master des ressources (nombre de CPUs, mémoire, etc.)
+   dont il dispose.
+2. Le master transmet l'offre de ressource du slave au framework.
+3. Le scheduler du framework répond au master en lui transmettant des tâches
+   à réaliser par le slave à disposition.
+4. Le master transmet les tâches au slave qui exécute les tâches du framework
+   en utilisant les excutors de ce dernier. Si les tâches du framework
+   n'utilisent pas toutes les ressources du slave, celui-ci peut proposer
+   le reste des ressources disponibles à un autre framework.
+5. Lorsqu'un tâche est terminée, le slave recommence le cycle à l'étape 1.
+
+ZooKeeper permet d'élire un master si le démarrage de ce dernier échoue.
+
+
+Sources:
+
+- `Présentation de Mesos
+  <https://www.slideshare.net/GladsonManuel/mesos-a-simple>`_
 
 Marathon
 ~~~~~~~~
