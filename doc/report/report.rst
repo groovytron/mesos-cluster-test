@@ -42,13 +42,19 @@ dans le dossier contenant le `Vagrantfile` et en utilisant la commande
 :code:`vagrant up`. On peut ensuite se connecter à la machine virtuelle en ssh
 grâce à la commande :code:`vagrant ssh`. On peut éteindre la machine virtuelle
 démarrée avec la commande `vagrant halt` ou `vagrant destroy` si on désire
-effacer effacer complètement la machine virtuelle.
+effacer complètement la machine virtuelle.
+
+Vagrant a besoin d'une solution de virtualisation pour fonctionner. Il supporte
+**Virtualbox**, **Docker** et également **KVM** qui remplissent ce rôle.
+Il est généralement utilisé avec Virtualbox mais il semble que KVM soit plus
+performant.
 
 
 Mesos
 ~~~~~
 
-Développé par Apache, **Mesos** permet de gérer des clusters de machines.
+Développé à l'université de Berkley, **Mesos** permet de gérer des clusters de
+machines.
 Ce logiciel propose plusieurs outils permettant l'isolation de CPU, de
 mémoire et de fichiers. Utiliser un tel logiciel permet donc de partager
 les ressources d'une infrastructure. En général, Mesos est utilisé
@@ -66,8 +72,8 @@ des containers. Marathon propose une *API REST* implémentée en *Scala*.
 ZooKeeper
 ~~~~~~~~~
 
-Aussi développé par Apache, *ZooKeeper* permet de syncronizer différents
-services entre eux grâce à un système de stockage clé-valeur implémenté
+*ZooKeeper* permet de syncronizer différents services entre eux grâce à
+un système de stockage clé-valeur implémenté
 sous forme d'un système de fichiers. Les clients peuvent lire ou écrire
 dans ce système de fichier pour se transmettre des informations et ainsi
 partager leurs configurations (accès aux serveurs de base de données, accès
