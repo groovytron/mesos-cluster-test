@@ -48,3 +48,9 @@ doc/
 
 # Box storage for spec
 test/vagrant-spec/boxes/*.box
+
+# Boxes (because of their size)
+*.box
+
+# Other generated files
+*.tar.gz
