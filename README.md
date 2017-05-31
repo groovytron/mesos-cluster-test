@@ -3,6 +3,9 @@
 This repo contains files allowing to setup
 a [Mesos Marathon](https://mesosphere.github.io/marathon/) cluster using
 [Vagrant](https://www.vagrantup.com/) and [Ansible](http://docs.ansible.com/ansible/playbooks.html).
+The main goals of this repo were to help me to understand how Vagrant and
+Ansible work together and teach me how the Mesos Marathon can be setup
+and for what purpose.
 
 You will need to have the following softwares installed on your system:
 
