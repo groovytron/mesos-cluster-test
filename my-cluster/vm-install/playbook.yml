@@ -41,7 +41,13 @@
       - name: install outyet
         shell: docker load --input=/vagrant/outyet.tar.gz
       - name: start mesos-dns
-        shell: 'curl -X POST http://192.168.33.10:8080/v2/apps -d@/vagrant/mesosdns.json -H "Content-type: application/json"'
+        uri:
+          url: "http://node1:8080/v2/apps"
+          status_code: 201
+          method: POST
+          body_format: json
+          return_content: yes
+          body: "{{ lookup('file','mesosdns.json') }}"
 
 - hosts: nodes
   remote_user: vagrant
