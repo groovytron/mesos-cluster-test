@@ -62,3 +62,6 @@ Alternatively, you can use Marathon API and push the app with `curl`
 by launching `curl -X POST http://192.168.33.10:8080/v2/apps
 -d @/vagrant/outyet.json -H "Content-type: application/json"`.
 
+# Troubleshooting
+
+If you experience problems intalling vagrant plugins and your distribution is Ubuntu 16.04, use [this solution](https://stackoverflow.com/a/36991648).
